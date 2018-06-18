@@ -8,11 +8,12 @@ Created on Wed Jun 13 00:20:43 2018
 
 #the process in KMC sim
 
-import numpy as np
+
 from KMCLib import *
 
 coordinates = [[   0.000000e+00,   0.000000e+00,   0.000000e+00]]
 T = 873
+e = 2.718281828
 R=8.3145
 P=6000.0
 P_CH4 = P*0.5
@@ -20,14 +21,15 @@ P_CH4 = P*0.5
 #define the k based on pre-exponential factor, activation energy, gas constant and temperature
 def RateCalculator(A, Ea, T=873):
     R = 8.3145
-    k = A * np.exp(-1*Ea/(R*T))
+    e = 2.718281828
+    k = A * (e**(-1*Ea/(R*T)))
     return k
 
 # define the k of diffusion
 D_Oi = 5.45E-7
 a = 2.48E-10
 Qi = 158679.72
-K_diff = D_Oi/a/a * np.exp(-1*Qi/R/T)
+K_diff = D_Oi/a/a * (e**(-1*Qi/R/T))
 
 #coordinates four direction  wait for confirm
 coordinate_right = [[   0.000000e+00,   0.000000e+00,   0.000000e+00],

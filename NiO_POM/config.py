@@ -30,7 +30,7 @@ types = ['E']*10000
 #set up the configuration
 configuration = KMCConfiguration(lattice = lattice,
                                  types=types,
-                                 possible_types = ['E','CH4','CH4*', 'CH3*', 'CH2*', 'CH*', 'C*', 'H*', 'H2', 'O2', 'O*', 'Ox', 'CO', 'CO*', 'CO2', 'H2O' ])
+                                 possible_types = ['E','CH4','CH4*', 'CH3*', 'CH2*', 'CH*', 'C*', 'H*', 'H2', 'O2', 'O*', 'Ox', 'CO', 'CO*', 'CO2', 'H2O', 'OH*' ])
 
 #use the _script() function to get a script for generation of the config
 

@@ -27,3 +27,4 @@ t_calend = time.clock()
 print("sim complete time cost is :", t_calend-t_calstart) 
 #length of lattice
 size = 100
+
